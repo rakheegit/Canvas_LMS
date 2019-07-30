@@ -1,0 +1,89 @@
+ul {
+    padding: 0;
+    margin: 20px;
+    
+  }
+  
+  .Tile {
+    margin-top: -1em;
+    margin-left: 15em;
+    text-align: center;
+    height: 57vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: -100px;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #3c8dbc;
+    font-weight: normal;
+    letter-spacing: 0em;
+    text-shadow: 0px 0px 0px rgba(78, 73, 73, 0.9);
+    font-family: Arial, Helvetica, sans-serif
+  }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body {
+  font-family: 'Roboto';
+  background-color: #1976D2;
+}
+
+form {
+  max-width: 400px;
+  background-color: #fff;
+  margin:  30px  auto;
+  
+  margin-left: 200px;
+  padding: 20px;
+}
+
+ul {
+  list-style: none;
+
+}
+
+li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+input[type="radio"] {
+  margin: 0 10px 0 0;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.submit-button {
+  border: 0;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  cursor: pointer;
+  background-color: #7E57C2;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #673AB7;
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+}
+.btn_space{
+  margin-right:10px;
+}

@@ -1,0 +1,36 @@
+.side-menu {
+  height: 13%;
+  background: white;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 350px;
+  left: 230px;
+  width: 50%;
+  max-width: 190px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.side-menu-fixed {
+  height: 100%;
+  background: white;
+  box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 56px;
+  left: 230px;
+  width: 50%;
+  max-width: 190px;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu-fixed.open {
+  transform: translateX(0);
+}
+

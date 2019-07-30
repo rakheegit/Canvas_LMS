@@ -1,0 +1,145 @@
+
+
+body > #root > div {
+  height: 100vh;
+}
+.content-wrapper {
+  height: 170vh;
+}
+
+.btnDiv {
+  width: 100%;
+  left: 300px;
+  top: 10px;
+  position: absolute;
+}
+.container {
+  width: 100%;
+}
+.left, .right {
+  width: 50%;
+  float: left;
+}
+.fieldBlock
+    {
+      height: 500px;
+    display: block;
+    background-color:white;
+    width: 220px;
+    margin-bottom: 700px;
+    float: left;
+    padding: 10px 0px 10px 10px;
+    border-style: solid;
+    border-color: rgb(248, 248, 248);
+    border-width: 0.2px;
+    }
+
+.title
+    {
+    font-weight: 400;
+    font-family: "Lucida Console";
+    border-style: solid;
+    border-color: rgb(248, 248, 248);
+    background-color:white;
+    border-width: 0.2px;
+    padding: 0.5em
+    }
+  img {
+      display: block;
+      max-width:230px;
+      max-height:95px;
+      width: auto;
+      height: auto;
+    }
+input
+    {
+    border: 1px solid rgb(217, 225, 228);
+    font-size: 1.1em;
+    }
+/*
+    table, td, th {  
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+  
+    th,td    {padding: 15px;
+    }
+*/
+table {
+      border-collapse: collapse;
+      width: 820px;
+      position: absolute;
+      top:50px;
+      left:-50px
+    }
+    
+    table td, table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    
+    table tr:nth-child(even){background-color: #ffffff;}
+    table tr:nth-child(odd){background-color: #ddd}
+    
+    table tr:hover {background-color:  #91b8d88c;;}
+    
+    table th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+/*      background-color: rgb(126, 128, 138); */
+      background-color: #3c8dbc;
+      color: white;
+    }
+
+#btn_space{
+  margin-right:10px;
+}
+
+form input.error {
+  border-color: red;
+}
+
+/*
+body {
+  background-color: #FFCC00;
+  padding: 20px;
+  margin: 0;
+}
+h1, h2, p, Nav, NavItem {
+  font-family: sans-serif;
+}
+
+Nav.header NavItem {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+
+Nav.header {
+  background-color: #111;
+  padding: 0;
+}
+Nav.header NavItem {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+.content {
+  background-color: #FFF;
+  padding: 20px;
+}
+.content h2 {
+  padding: 0;
+  margin: 0;
+}
+.content NavItem {
+  margin-bottom: 10px;
+}
+
+.active {
+  background-color: #0099FF;
+}
+*/

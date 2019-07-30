@@ -1,0 +1,54 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "@material-ui/icons": "^3.0.2",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "custom-error": "^0.2.1",
+    "jquery": "^3.3.1",
+    "jwt-decode": "^2.2.0",
+    "material-ui": "^1.0.0-beta.47",
+    "react": "^16.6.3",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-burger-menu": "^2.6.5",
+    "react-cookies": "^0.1.0",
+    "react-dom": "^16.8.3",
+    "react-file-viewer": "^1.1.0",
+    "react-native": "^0.58.5",
+    "react-native-elements": "^1.1.0",
+    "react-native-vector-icons": "^6.3.0",
+    "react-pdf-js": "^4.0.2",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "react-sidebar": "^3.0.2",
+    "reactstrap": "^7.1.0",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-form": "^8.1.0",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^0.85.0",
+    "socket.io-client": "^2.2.0",
+    "typescript": "^3.3.3333"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "http://localhost:3001"
+}
