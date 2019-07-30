@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { updateProfile } from "../actions/userActions";
+import { updateProfile, fetchProfile } from "../actions/userActions";
 import {Redirect} from 'react-router';
 import cookie from 'react-cookies';
 import Button from '@material-ui/core/Button';
 import { Field, reduxForm } from "redux-form";
 import { connect } from "react-redux";
-import axios from 'axios';
+import _ from "lodash";
 
 
 class UpdateProfile extends Component {
@@ -43,7 +43,47 @@ class UpdateProfile extends Component {
           </div>
         );
       }
-      
+
+      componentDidMount() {
+        //call to action
+        this.handleInitialize();
+        
+      }
+
+      handleInitialize() {
+
+
+        let name =  _.map(this.props.profile, prof => {  return  prof.user_name  })
+        let email =  _.map(this.props.profile, prof => { return  prof.user_email    })  
+        let phone =  _.map(this.props.profile, prof => { return  prof.user_phone   })
+        let about_me =  _.map(this.props.profile, prof => {  return  prof.user_about_me})
+        let city =  _.map(this.props.profile, prof => {  return  prof.user_city})
+        let country =  _.map(this.props.profile, prof => {  return  prof.user_country})
+        let company =  _.map(this.props.profile, prof => {  return  prof.user_company})
+        let school =  _.map(this.props.profile, prof => {  return  prof.user_school})
+        let hometown =  _.map(this.props.profile, prof => {  return  prof.user_hometown})    
+        let language =  _.map(this.props.profile, prof => {  return  prof.user_language})   
+        let gender =  _.map(this.props.profile, prof => {  return  prof.user_gender})   
+
+        
+            const initData = {
+              "user_name": name[0],
+              "user_email": email[0],
+              "user_phone": phone[0],
+              "user_about_me": about_me[0],
+              "user_city": city[0],
+              "user_country": country[0],
+              "user_company": company[0],
+              "user_school": school[0],
+              "user_hometown": hometown[0],
+              "user_language": language[0],
+              "user_gender": gender[0]
+            };
+        
+            this.props.initialize(initData);
+          }
+        
+
     onSubmit (values) {
 
     this.props.updateProfile(values,() => {
@@ -57,6 +97,10 @@ class UpdateProfile extends Component {
     render () {
         const { handleSubmit } = this.props;
 
+        let name =  _.map(this.props.profile, prof => {  return  prof.user_name  })
+     
+
+
         let redirectVar = null;
         if(!cookie.load('cookie')){
             redirectVar = <Redirect to= "/signin"/>
@@ -68,13 +112,12 @@ class UpdateProfile extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 mt-5 mx-auto">
+                 
                     <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+              
                             <h1 className="h3 mb-3 font-weight-normal">Profile Update Form</h1>
-         <Field
-        name="user_name"
-        label="Name"
-        component={this.renderField}
-      />
+                            <h2 style={{ color: "blue" }} className="h2 mb-3 font-weight-normal"> {name} </h2>
+                         
         <Field
           name="user_phone"
           label="Phone"
@@ -146,9 +189,7 @@ function validate(values) {
     if (!values.user_phone) {
       errors.user_phone = "Enter Phone";
     }
-    if (!values.user_about_me) {
-      errors.user_about_me = "Enter About Yourself";
-    }
+
     if (!values.user_city) {
         errors.user_city = "Enter City";
       }
@@ -158,18 +199,7 @@ function validate(values) {
       if (!values.user_company) {
         errors.user_company = "Enter Company";
       }
-      if (!values.user_school) {
-        errors.user_school = "Enter School";
-      }
-      if (!values.user_hometown) {
-        errors.user_hometown = "Enter Hometown";
-      }
-      if (!values.user_language) {
-        errors.user_language = "Enter Language";
-      }
-      if (!values.user_gender) {
-        errors.user_gender = "Enter Gender";
-      }
+ 
    //   if (!values.user_photo) {
    //     errors.user_photo = "Uploda Photo";
    //   }
@@ -178,7 +208,7 @@ function validate(values) {
     return errors;
   }
 
-
+/*
   const mapStateToProps = state => (
     {
   rescode: state.status
@@ -190,3 +220,24 @@ export default reduxForm({
     form: "ProfileUpdateForm"
   })(connect(mapStateToProps, { updateProfile })(UpdateProfile));
 
+*/
+
+function mapStateToProps(state)
+{
+ 
+return{
+rescode: state.status,
+profile: state.profile.items,
+
+} 
+}
+
+UpdateProfile = reduxForm({
+validate,
+form: 'ProfileUpdateForm'
+})(UpdateProfile)
+
+
+UpdateProfile = connect(mapStateToProps, { fetchProfile, updateProfile })(UpdateProfile);
+
+export default UpdateProfile;
