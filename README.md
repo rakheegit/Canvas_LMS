@@ -17,8 +17,8 @@ C) Home
 2. Faculty can view all the courses created by them.
 
 D) Course Based:
-1. Student actions: View Grades, Submit/view assignments, quiz, view announcements, people registered for the course, download lecture notes and files.
-2. Faculty actions: Create assignments, quizzes, download submissions from students, make announcements, students registered for a course, grade assignments for students, upload lecture notes and files, remove student from a course.
+1. Student actions: View Grades, Submit and view the submitted assignments, take quiz, view announcements, people registered for the course, download lecture notes and files.
+2. Faculty actions: Create assignments, create quizzes, download submissions from students, make announcements, view students registered for a course, grade assignments for students, upload lecture notes and files, remove student from a course.
 
 E) Dashboard 
 1. The student dashboard with course cards are be made organizable.
