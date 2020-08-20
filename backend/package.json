@@ -9,7 +9,7 @@
   "author": "Rakhee Singh",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.4",
+    "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
