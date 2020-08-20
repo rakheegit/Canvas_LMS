@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.5",
+    "bcrypt": "^5.0.0",
     "formidable": "^1.1.1",
     "glob": "^7.1.2",
     "images-upload-middleware": "^1.1.1",
