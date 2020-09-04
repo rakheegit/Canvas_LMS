@@ -16,7 +16,7 @@
     "jsonwebtoken": "^8.5.1",
     "kafka-node": "^2.5.0",
     "mongo": "^0.1.0",
-    "mongodb": "^2.2.31",
+    "mongodb": "^3.1.13",
     "mongodb-autoincrement": "^1.0.1",
     "mongoose": "^5.5.0",
     "multer": "^1.3.0",
