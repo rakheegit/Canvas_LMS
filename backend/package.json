@@ -16,7 +16,7 @@
     "connect-multiparty": "^2.2.0",
     "cookie-parser": "^1.4.4",
     "cors": "^2.8.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "form-data": "^2.3.3",
     "http": "0.0.0",
     "jsonwebtoken": "^8.5.0",
